@@ -1,0 +1,31 @@
+@import "bootstrap.less";
+
+a{
+	color:@gray;
+	cursor:pointer;
+	&.loading{
+		color:transparent;
+		background:url(../img/ajax-loader.gif) no-repeat;
+		display:inline-block;
+		width:16px;
+		height:16px;
+	}
+}
+i{
+	font-size: 20px;
+}
+.media-listing{
+	ul{
+		padding:0;
+		li{
+			display:block;
+			width:150px;
+			float:left;
+			margin:0px 20px 20px 0px;
+		}
+	}
+	img.cover{
+		display:block;
+		width:100%;
+	}
+}
