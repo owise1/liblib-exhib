@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="LibLibExhibApp">
+  <head>
+    <title>Exhibition</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <script src="script/vendor.min.js"></script>
+
+  </head>
+  <body ng-controller="ListingCtrl">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-12">
+          <div>
+            <label for="">Upload:</label> <input type="file" onchange="angular.element(this).scope().upload(this)" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Works</h2>
+          <div class="media-listing">
+            <ul class="clearfix">
+              <li ng-repeat="media in medias">
+                <label>Title</label>
+                <input class="form-control" ng-model="media.info.title" />
+                <label>Description</label>
+                <textarea class="form-control" ng-model="media.info.description"></textarea>
+                <button ng-click="save(media)" class="btn">Save</button>
+                <button ng-click="del(media)" class="btn">Delete</button>
+                <a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
+                <a href="{{media.media.url}}" target="_blank">{{media.name}}</a>
+                <small>{{media.content_type}}</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+  		</div>
+  	</div>
+	  <script src="script/app.min.js"></script>
+	</body>
+
+</html>

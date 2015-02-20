@@ -1,4 +1,10 @@
-# Development
+# liblib-exhib
+
+An exhibition app for [liblib](https://github.com/owise1/liblib).
+
+Load digital artworks onto liblib to create an ad-hoc offline exhibition.
+
+## Development
 
 First, you'll need to install [couchapp](https://github.com/couchapp/couchapp) 
 
@@ -30,7 +36,3 @@ gulp watch
 
 
 
-##### Design
-
-* each document is self-contained
-* document body for meta data

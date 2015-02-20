@@ -6,31 +6,24 @@
     <script src="script/vendor.min.js"></script>
 
   </head>
-  <body ng-controller="ListingCtrl">
+  <body ng-controller="ListingCtrl" class="front">
   	<div class="container">
   		<div class="row">
-  			<div class="col-md-12">
-          <div>
-            <label for="">Upload:</label> <input type="file" onchange="angular.element(this).scope().upload(this)" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h2>Remote Media</h2>
+        <div class="col-xs-12">
           <div class="media-listing">
             <ul class="clearfix">
               <li ng-repeat="media in medias">
-                <a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
-                <a href="{{media.media.url}}" target="_blank">{{media.info.title}}</a>
-                <small>{{media.content_type}}</small>
-                <a ng-click="sync(media)" ng-class="{ loading : media.__loading }"><i class="glyphicon glyphicon-cloud-download"></i></a>
+                <video controls>
+                  <source src="{{media.media.url}}" type="{{media.content_type}}"/>
+                </video>
+                <h5>{{media.info.title}}</h5>
+                <p>{{media.info.description}}</p>
               </li>
             </ul>
           </div>
         </div>
-  			
   		</div>
   	</div>
-
 	  <script src="script/app.min.js"></script>
 	</body>
 

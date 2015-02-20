@@ -2,7 +2,7 @@ var _pl = {
   db : 'liblib',
   design : 'liblib-exhib'
 };
-
+ 
 window.URL = window.URL || window.webkitURL;
 
 var LibLibExhibApp = angular.module('LibLibExhibApp', ['CornerCouch'])
@@ -32,16 +32,27 @@ LibLibExhibApp.controller('ListingCtrl', ['$scope', '$http', 'cornercouch', func
       })
       doc.save()
       .success(function(){
-        doc.attach(f, f.name); 
+        doc.attach(f, f.name, getListing); 
       });
     })
   }
 
+  $scope.del = function(doc){
+    $scope.db.newDoc(doc).remove().success(getListing);
+  }
+
+  $scope.save = function(doc){
+    $scope.db.newDoc(doc).save().success(getListing);
+  }
+
   // get listing
-  $scope.db.query(config.design, 'media', { reduce : false, limit : 10, include_docs : true })
-  .success(function(resp){
-    $scope.medias = resp.rows.map(processDoc);
-  });
+  function getListing(){
+    $scope.db.query(config.design, 'media', { reduce : false, limit : 10, include_docs : true })
+    .success(function(resp){
+      $scope.medias = resp.rows.map(R.prop('doc')).map(processDoc);
+    });
+  }
+  getListing();
 
   function processDoc(doc){
     if(doc._attachments){
