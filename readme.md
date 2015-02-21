@@ -2,7 +2,7 @@
 
 An exhibition app for [liblib](https://github.com/owise1/liblib).
 
-Load digital artworks onto liblib to create an ad-hoc offline exhibition.
+Load digital artworks onto liblib to create an ad-hoc wifi offline exhibition.
 
 ## Development
 
