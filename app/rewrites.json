@@ -28,6 +28,10 @@
   "to" : "/img/:file"
 },
 {
+  "from" : "/liblib",
+  "to" : "../../"
+},
+{
   "from" : "/liblib/*",
   "to" : "../../*"
 }
