@@ -12,16 +12,9 @@
   "query" : {}
 },
 {
-  "from" : "/style/:file",
-  "to" : "/style/:file",
-  "medthod" : "GET",
-  "query" : {}
-},
-{
-  "from" : "/script/:file",
-  "to" : "/script/:file",
+  "from" : "/*",
+  "to" : "/*",
   "medthod" : "GET",
   "query" : {}
 }
-
 ]
