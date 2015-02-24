@@ -12,9 +12,23 @@
   "query" : {}
 },
 {
-  "from" : "/*",
-  "to" : "/*",
-  "medthod" : "GET",
-  "query" : {}
+  "from" : "/script/:file",
+  "to" : "/script/:file"
+},
+{
+  "from" : "/style/:file",
+  "to" : "/style/:file"
+},
+{
+  "from" : "/fonts/:file",
+  "to" : "/fonts/:file"
+},
+{
+  "from" : "/img/:file",
+  "to" : "/img/:file"
+},
+{
+  "from" : "/liblib/*",
+  "to" : "../../*"
 }
 ]

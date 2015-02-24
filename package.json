@@ -1,6 +1,6 @@
 {
   "name": "liblib-exhib",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Exhibition Platform for liblib",
   "main": "index.js",
   "scripts": {
