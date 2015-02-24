@@ -1,0 +1,27 @@
+[
+{
+  "from" : "",
+  "to" : "index.html",
+  "method" : "GET",
+  "query" : {}
+},
+{
+  "from" : "admin",
+  "to" : "admin.html",
+  "medthod" : "GET",
+  "query" : {}
+},
+{
+  "from" : "/style/:file",
+  "to" : "/style/:file",
+  "medthod" : "GET",
+  "query" : {}
+},
+{
+  "from" : "/script/:file",
+  "to" : "/script/:file",
+  "medthod" : "GET",
+  "query" : {}
+}
+
+]
