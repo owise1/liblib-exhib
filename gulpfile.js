@@ -28,6 +28,10 @@ gulp.task("push", ['vendor', 'couchapp'], function(){
   console.log('app pushed');
 });
 
+gulp.task("build", ['vendor', 'less', 'js'], function(){
+  console.log('built');
+});
+
 gulp.task("couchapp", ['less', 'js'], function(){
   exec("cd app; couchapp push", function (error, stdout, stderr) {      
     console.log('Gulp CouchApp:'.magenta);

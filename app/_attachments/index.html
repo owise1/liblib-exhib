@@ -9,14 +9,16 @@
   <body ng-controller="ListingCtrl" class="front">
   	<div class="container">
   		<div class="row">
-        <div class="col-xs-12">
+        <div class="col-md-6">
+          <h1 ng-bind="exhibitionDoc.title"></h1>
+          <div ng-bind-html="exhibitionDoc.description | sanitize"></div>
+        </div>
+        <div class="col-md-6">
           <div class="media-listing">
-            <ul class="clearfix">
+            <ul class="clearfix" >
               <li ng-repeat="media in medias">
-                <video controls>
-                  <source src="{{media.media.url}}" type="{{media.content_type}}"/>
-                </video>
-                <h5>{{media.info.title}}</h5>
+                <a ng-href="{{media.media.url}}"><img class="db100" ng-src="{{media.coverImg}}" /></a>
+                <h2>{{media.info.title}}</h2>
                 <p>{{media.info.description}}</p>
               </li>
             </ul>
