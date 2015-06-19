@@ -11,6 +11,13 @@ To install in your liblib you'll need [couchapp](https://github.com/couchapp/cou
     1. `npm install liblib-exhib`
     2. `couchapp push node_modules/liblib-exhib/app default`
 
+If you'd like requests for any domain to use your exhibition add these lines to `/etc/couchdb/local.ini` [(more info)](http://docs.couchdb.org/en/latest/config/http.html#virtual-hosts)
+
+```
+[vhosts]
+* = /liblib/_design/liblib-exhib/_rewrite
+```
+
 ## Development
 
 First, you'll need to install [couchapp](https://github.com/couchapp/couchapp) 
